@@ -1,0 +1,24 @@
+
+     //print decimal number to binary number.
+#include<iostream>
+#include<math.h>
+using namespace std;
+int fab(int n);
+
+int main()
+{
+    int n,rem,p=0,count=0,z=0,sum=0;
+    cout<<"enter a number";
+    cin>>n;
+    while(n>0)
+    {
+        rem=n%2;
+        p=pow(10,count);
+        n/=2;
+        count++;
+        z=p*rem;
+        sum=sum+z;
+    }
+    cout<<"binary number is="<<sum<<endl;
+    return 0;
+}
